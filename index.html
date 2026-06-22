@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heng Chanboth — Full-Stack & Flutter Developer</title>
+<meta name="description" content="Portfolio of Heng Chanboth, Full-Stack Developer & Flutter Engineer based in Phnom Penh, Cambodia.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-ink text-slate-200 antialiased">
+
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+
+<!-- NAVBAR -->
+<header class="fixed top-0 inset-x-0 z-50 nav-bar">
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#home" class="font-display text-xl font-bold gradient-text">CB.</a>
+    <ul class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="#contact" class="hidden md:inline-flex btn-gradient text-sm">Let's Talk</a>
+    <button id="menuBtn" class="md:hidden text-2xl text-slate-200"><i class="fa-solid fa-bars"></i></button>
+  </nav>
+  <ul id="mobileMenu" class="hidden md:hidden flex flex-col gap-1 px-6 pb-4 text-sm font-medium text-slate-300">
+    <li><a href="#home" class="block py-2 nav-link">Home</a></li>
+    <li><a href="#about" class="block py-2 nav-link">About</a></li>
+    <li><a href="#skills" class="block py-2 nav-link">Skills</a></li>
+    <li><a href="#projects" class="block py-2 nav-link">Projects</a></li>
+    <li><a href="#education" class="block py-2 nav-link">Education</a></li>
+    <li><a href="#contact" class="block py-2 nav-link">Contact</a></li>
+  </ul>
+</header>
+
+<!-- HERO -->
+<section id="home" class="relative min-h-screen flex items-center pt-28 pb-16 px-6 overflow-hidden">
+  <div class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+    <div class="reveal">
+      <span class="pill mb-5 inline-flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Open to freelance & internship work
+      </span>
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] mb-4">
+        Hey, I'm <span class="gradient-text">Heng Chanboth</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-slate-300 mb-2 h-8">
+        <span id="typewriter" class="gradient-text font-semibold"></span><span class="typewriter-cursor">|</span>
+      </p>
+      <p class="text-slate-400 max-w-md mb-8 leading-relaxed">
+        ITE student at RUPP passionate about building mobile solutions with Flutter &amp; Dart.
+        Experienced across the stack — from clean UX/UI in Figma to backend APIs with Node.js and MySQL.
+      </p>
+      <div class="flex flex-wrap gap-4 mb-8">
+        <a href="#projects" class="btn-gradient">View My Work <i class="fa-solid fa-arrow-right ml-1"></i></a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+      <div class="flex items-center gap-5 text-slate-400 text-lg">
+        <a href="mailto:hengchanboth88@gmail.com" class="hover:text-violet-400 transition" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="tel:+85586912172" class="hover:text-violet-400 transition" title="Phone"><i class="fa-solid fa-phone"></i></a>
+        <span class="flex items-center gap-1 text-sm"><i class="fa-solid fa-location-dot"></i> Phnom Penh, Cambodia</span>
+      </div>
+    </div>
+
+    <div class="relative flex justify-center reveal" style="transition-delay:.15s">
+      <div class="avatar-ring">
+        <div class="avatar-core font-display text-5xl font-bold gradient-text">CB</div>
+      </div>
+      <span class="float-badge badge-1"><i class="fa-solid fa-mobile-screen-button"></i> Flutter</span>
+      <span class="float-badge badge-2"><i class="fa-brands fa-node-js"></i> Node.js</span>
+      <span class="float-badge badge-3"><i class="fa-brands fa-react"></i> React</span>
+      <span class="float-badge badge-4"><i class="fa-solid fa-database"></i> MySQL</span>
+      <span class="float-badge badge-5"><i class="fa-brands fa-figma"></i> Figma</span>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue hidden sm:flex"><i class="fa-solid fa-chevron-down"></i></a>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="relative py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <p class="section-tag reveal">About Me</p>
+    <h2 class="section-title reveal">A bit about my journey</h2>
+
+    <div class="grid md:grid-cols-2 gap-10 mt-10">
+      <div class="glass-card p-8 reveal">
+        <p class="text-slate-300 leading-relaxed">
+          I'm an Information Technology Engineering student at the
+          <span class="text-white font-medium">Royal University of Phnom Penh (RUPP)</span>,
+          passionate about building mobile solutions with <span class="text-white font-medium">Flutter &amp; Dart</span>.
+          I work across the full stack — designing clean UX/UI in Figma, building backend APIs with
+          Node.js, and managing data with MySQL.
+        </p>
+        <p class="text-slate-300 leading-relaxed mt-4">
+          I'm eager to learn, collaborate, and grow as a developer — currently building real products
+          with a small freelance team.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 reveal" style="transition-delay:.1s">
+        <div class="info-card">
+          <i class="fa-solid fa-graduation-cap text-violet-400 text-xl mb-2"></i>
+          <p class="text-sm text-slate-400">Currently Studying</p>
+          <p class="font-medium text-slate-100">IT Engineering, RUPP</p>
+        </div>
+        <div class="info-card">
+          <i class="fa-solid fa-location-dot text-pink-400 text-xl mb-2"></i>
+          <p class="text-sm text-slate-400">Based In</p>
+          <p class="font-medium text-slate-100">Phnom Penh, Cambodia</p>
+        </div>
+        <div class="info-card">
+          <i class="fa-solid fa-language text-cyan-400 text-xl mb-2"></i>
+          <p class="text-sm text-slate-400">Languages</p>
+          <p class="font-medium text-slate-100">Khmer, English, Chinese</p>
+        </div>
+        <div class="info-card">
+          <i class="fa-solid fa-briefcase text-emerald-400 text-xl mb-2"></i>
+          <p class="text-sm text-slate-400">Focus</p>
+          <p class="font-medium text-slate-100">Flutter & Full-Stack Dev</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="relative py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <p class="section-tag reveal">What I Work With</p>
+    <h2 class="section-title reveal">Skills & Tools</h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+
+      <div class="glass-card p-6 reveal">
+        <h3 class="font-display font-semibold text-slate-100 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-code text-violet-400"></i> Languages
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-pill">Dart</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">SQL</span>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 reveal" style="transition-delay:.05s">
+        <h3 class="font-display font-semibold text-slate-100 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-mobile-screen-button text-pink-400"></i> Frontend & Mobile
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-pill">Flutter</span>
+          <span class="skill-pill">React.js</span>
+          <span class="skill-pill">Responsive Design</span>
+          <span class="skill-pill">State Management</span>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 reveal" style="transition-delay:.1s">
+        <h3 class="font-display font-semibold text-slate-100 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-server text-cyan-400"></i> Backend
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-pill">Node.js</span>
+          <span class="skill-pill">REST APIs</span>
+          <span class="skill-pill">Authentication</span>
+          <span class="skill-pill">CRUD</span>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 reveal" style="transition-delay:.15s">
+        <h3 class="font-display font-semibold text-slate-100 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-database text-emerald-400"></i> Database
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-pill">MySQL</span>
+          <span class="skill-pill">Database Design</span>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 reveal" style="transition-delay:.2s">
+        <h3 class="font-display font-semibold text-slate-100 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-pen-ruler text-amber-400"></i> Design & Tools
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-pill">Figma</span>
+          <span class="skill-pill">UI/UX Design</span>
+          <span class="skill-pill">Debugging</span>
+          <span class="skill-pill">Testing</span>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 reveal" style="transition-delay:.25s">
+        <h3 class="font-display font-semibold text-slate-100 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-layer-group text-fuchsia-400"></i> Full-Stack
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-pill">API Integration</span>
+          <span class="skill-pill">Mobile App Dev</span>
+          <span class="skill-pill">Full-Stack Development</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="relative py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <p class="section-tag reveal">Selected Work</p>
+    <h2 class="section-title reveal">Projects</h2>
+
+    <div class="grid md:grid-cols-2 gap-8 mt-10">
+
+      <!-- Project 1 -->
+      <div class="project-card reveal">
+        <div class="project-cover proj-cover-1">
+          <i class="fa-solid fa-bag-shopping text-5xl text-white/90"></i>
+        </div>
+        <div class="p-6">
+          <span class="pill mb-3 inline-block">Freelance Team Project</span>
+          <h3 class="font-display text-xl font-semibold text-slate-100 mb-2">
+            Fashion E-Commerce App &amp; Admin System
+          </h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            A full-stack e-commerce platform with a cross-platform mobile app, backend APIs, database
+            and an admin panel — built end-to-end with a small freelance team.
+          </p>
+          <ul class="text-sm text-slate-400 space-y-1.5 mb-4">
+            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Cross-platform mobile app built with Flutter (Dart)</li>
+            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Backend services &amp; REST APIs with Node.js</li>
+            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>MySQL database for products, orders &amp; users</li>
+            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Admin panel for products, categories &amp; orders</li>
+            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Authentication, product listing &amp; order processing</li>
+            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>UI/UX designed in Figma</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="skill-pill">Flutter</span>
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">Figma</span>
+            <span class="skill-pill">REST API</span>
+          </div>
+          <p class="text-xs text-slate-500 flex items-center gap-2">
+            <i class="fa-solid fa-user-group"></i>
+            Built with teammate Sreng Sokheng — Full-Stack Developer / Technical Lead
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card reveal" style="transition-delay:.1s">
+        <div class="project-cover proj-cover-2">
+          <i class="fa-solid fa-utensils text-5xl text-white/90"></i>
+        </div>
+        <div class="p-6">
+          <span class="pill mb-3 inline-block">Personal Project</span>
+          <h3 class="font-display text-xl font-semibold text-slate-100 mb-2">
+            Food Ordering Mobile App
+          </h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            A mobile food ordering app focused on usability and smooth checkout flow, built solo
+            end-to-end with Flutter.
+          </p>
+          <ul class="text-sm text-slate-400 space-y-1.5 mb-4">
+            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Menu browsing, cart system &amp; checkout flow</li>
+            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Connected to backend APIs for dynamic data</li>
+            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Focus on usability &amp; layout consistency</li>
+            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Tested and debugged across devices</li>
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill">Flutter</span>
+            <span class="skill-pill">REST API</span>
+            <span class="skill-pill">UI/UX</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="relative py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <p class="section-tag reveal">Background</p>
+    <h2 class="section-title reveal">Education</h2>
+
+    <div class="mt-10 relative border-l-2 border-white/10 pl-8 space-y-10 max-w-2xl">
+
+      <div class="timeline-item reveal">
+        <span class="timeline-dot"></span>
+        <p class="text-xs text-violet-400 font-medium mb-1">2024 — Present</p>
+        <h3 class="font-display font-semibold text-slate-100">Royal University of Phnom Penh (RUPP)</h3>
+        <p class="text-sm text-slate-400">Information Technology Engineering</p>
+      </div>
+
+      <div class="timeline-item reveal" style="transition-delay:.05s">
+        <span class="timeline-dot"></span>
+        <p class="text-xs text-violet-400 font-medium mb-1">2023 — 2024</p>
+        <h3 class="font-display font-semibold text-slate-100">The BELTEI International School</h3>
+        <p class="text-sm text-slate-400">Graduated Grade 12</p>
+      </div>
+
+      <div class="timeline-item reveal" style="transition-delay:.1s">
+        <span class="timeline-dot"></span>
+        <p class="text-xs text-violet-400 font-medium mb-1">2016 — 2018</p>
+        <h3 class="font-display font-semibold text-slate-100">The BELTEI International School</h3>
+        <p class="text-sm text-slate-400">English Program — Completed Level 4</p>
+      </div>
+
+      <div class="timeline-item reveal" style="transition-delay:.15s">
+        <span class="timeline-dot"></span>
+        <p class="text-xs text-violet-400 font-medium mb-1">2013 — 2017</p>
+        <h3 class="font-display font-semibold text-slate-100">សាលារៀនហួរម៉េង-华明学校</h3>
+        <p class="text-sm text-slate-400">Chinese Program — Completed Level 6</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="relative py-24 px-6">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="section-tag reveal mx-auto">Get In Touch</p>
+    <h2 class="section-title reveal mx-auto">Let's build something together</h2>
+    <p class="text-slate-400 max-w-md mx-auto mt-4 reveal">
+      Open to freelance work, internships and collaborations. Drop me a message — I usually reply fast.
+    </p>
+
+    <div class="grid sm:grid-cols-3 gap-4 mt-10 reveal">
+      <a href="mailto:hengchanboth88@gmail.com" class="contact-card">
+        <i class="fa-solid fa-envelope text-violet-400 text-xl mb-2"></i>
+        <p class="text-sm text-slate-400">Email</p>
+        <p class="font-medium text-slate-100 text-sm break-all">hengchanboth88@gmail.com</p>
+      </a>
+      <a href="tel:+85586912172" class="contact-card">
+        <i class="fa-solid fa-phone text-pink-400 text-xl mb-2"></i>
+        <p class="text-sm text-slate-400">Phone</p>
+        <p class="font-medium text-slate-100 text-sm">+855 86 912 172</p>
+      </a>
+      <div class="contact-card">
+        <i class="fa-solid fa-location-dot text-cyan-400 text-xl mb-2"></i>
+        <p class="text-sm text-slate-400">Location</p>
+        <p class="font-medium text-slate-100 text-sm">Phnom Penh, Cambodia</p>
+      </div>
+    </div>
+
+    <a href="mailto:hengchanboth88@gmail.com" class="btn-gradient mt-10 inline-flex">
+      Say Hello <i class="fa-solid fa-paper-plane ml-1"></i>
+    </a>
+  </div>
+</section>
+
+<footer class="relative py-8 px-6 border-t border-white/5 text-center text-xs text-slate-500">
+  © 2026 Heng Chanboth. Built with Flutter, Node.js & a lot of coffee.
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
