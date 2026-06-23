@@ -1,3 +1,22 @@
+// Theme toggle (light/dark)
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+
+function applyThemeIcon() {
+  if (!themeIcon) return;
+  const isLight = document.documentElement.classList.contains('theme-light');
+  themeIcon.className = isLight ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+}
+applyThemeIcon();
+
+themeToggle?.addEventListener('click', () => {
+  const isLight = document.documentElement.classList.toggle('theme-light');
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  applyThemeIcon();
+  themeToggle.classList.add('spin');
+  setTimeout(() => themeToggle.classList.remove('spin'), 400);
+});
+
 // Mobile menu toggle
 const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
