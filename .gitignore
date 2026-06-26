@@ -1,0 +1,10 @@
+# Build output
+node_modules/
+dist/
+
+# Local served copies and temporary files
+served_index.html
+served_real.html
+npm-debug.log*
+.DS_Store
+.vscode/

@@ -1,43 +1,31 @@
-name: Validate & Deploy
+name: Build and deploy
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    branches: [ main, master ]
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
-concurrency:
-  group: pages
-  cancel-in-progress: true
-
 jobs:
-  validate:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
-      - name: Lint HTML
-        run: npx --yes htmlhint index.html
-
-  deploy:
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    needs: validate
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+          node-version: '18'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build site
+        run: npm run build
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          path: '.'
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          path: ./dist
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
